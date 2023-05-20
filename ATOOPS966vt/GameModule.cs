@@ -21,13 +21,14 @@ namespace ATOOPS966vt
             Bind<IPrinter>().To<ConsoleOperations>();
             Bind<IReader>().To<ConsoleOperations>();
             Bind<IConsoleOperations>().To<ConsoleOperations>();
-            Bind<Regex>().ToConstant(new Regex("@\"^\\d+\\s+\\d+$\""));
+            Bind<Regex>().ToMethod(context => new Regex(@"^\d+\s+\d+$"));
             Bind<InputValidator>().To<RegexInputValidator>();
             Bind<IInputTaker>().To<InputTaker>();
             Bind<IElementPicker>().To<ElementPicker>();
             Bind<IPickedChecker>().To<PickedCheker>();
             Bind<IOutOFBoundsCheck>().To<OutOFBoundsCheck>();
             Bind<IGameRound>().To<GameRound>();
+            Bind<int>().ToConstant(0).Named("EndgameValue");
             Bind<IEndGameChecker>().To<EndgameChecker>();
             Bind<IPointCalculator>().To<PointCalculator>();
             Bind<IGameLoop>().To<GameLoop>();

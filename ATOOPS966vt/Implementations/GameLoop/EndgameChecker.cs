@@ -1,4 +1,5 @@
 ﻿using ATOOPS966vt.Interfaces;
+using Ninject;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,7 @@ namespace ATOOPS966vt.Implementations.GameLoop
 {
     internal class EndgameChecker : IEndGameChecker
     {
-        public EndgameChecker(int endGameValue)
+        public EndgameChecker([Named("EndgameValue")] int endGameValue)
         {
             EndGameValue = endGameValue;
         }
