@@ -26,20 +26,6 @@ IGridGenerator generator = new GridGenerator();
 IGrid grid = generator.Generate(3, 3, elements, new ElementsValidator(consoleOperations));
 IDetermineWinner determineWinner = new DetermineWinner();
 
-//IGameLoop gameLoop = new GameLoop(
-//    consoleOperations,
-//    new GameRound(
-//        new InputTaker(
-//            new RegexInputValidator(regex)
-//        ),
-//        new ElementPicker(),
-//        consoleOperations,
-//        new PickedCheker(),
-//        new OutOFBoundsCheck()
-//    ),
-//    new EndgameChecker(0),
-//    new PointCalculator()
-//);
 var kernel = new StandardKernel();
 kernel.Load(new GameModule());
 var gameLoop = kernel.Get<IGameLoop>();

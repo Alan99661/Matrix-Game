@@ -9,7 +9,6 @@ namespace ATOOPS966vt.Interfaces.GameLoop
 {
     internal interface IGameLoop
     {
-        //public int GameRoud(IPlayer player,IGrid grid);
         public void LoopGame(IPlayer player1, IPlayer player2, IGrid grid);
     }
 }

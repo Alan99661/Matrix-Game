@@ -9,17 +9,11 @@ namespace ATOOPS966vt.Implementations
 {
     public class ConsoleOperations : IConsoleOperations
     {
-        //private static readonly ConsoleOperations instance = new ConsoleOperations();
+        
+        private static readonly ConsoleOperations instance = new ConsoleOperations();
 
         public ConsoleOperations() { }
 
-        //public static ConsoleOperations Instance
-        //{
-        //    get
-        //    {
-        //        return instance;
-        //    }
-        //}
 
         public void Print(string message)
         {

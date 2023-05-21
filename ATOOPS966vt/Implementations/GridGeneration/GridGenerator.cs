@@ -27,10 +27,10 @@ namespace ATOOPS966vt.Implementations.GridGeneration
                 for (int j = 0; j < y; j++)
                 {
                     char _key = _keys[random.Next(_keys.Count)];
-                    _grid[i, j] = new Element(_key, elements[_key]); //Знам
+                    _grid[i, j] = new Element(_key, elements[_key]);
                 }
             }
-            return new Grid(_grid);//и тук знам
+            return new Grid(_grid);
         }
     }
 }
